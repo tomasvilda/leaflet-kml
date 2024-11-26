@@ -273,7 +273,7 @@ L.Util.extend(L.KML, {
     }
 
     if (name) {
-      layer.bindPopup('<h2>' + name + '</h2>' + descr, { className: 'kml-popup'});
+      layer.bindPopup('<p>' + name + '</p>' + descr, { className: 'kml-popup'});
     }
   },
 
@@ -414,8 +414,11 @@ L.Util.extend(L.KML, {
 
 L.KMLIcon = L.Icon.extend({
 	options: {
-		iconSize: [32, 32],
-		iconAnchor: [16, 16],
+		shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+		iconSize: [25, 41],
+		iconAnchor: [12, 41],
+		popupAnchor: [1, -34],
+		shadowSize: [41, 41],
 	},
 	_setIconStyles: function (img, name) {
 		L.Icon.prototype._setIconStyles.apply(this, [img, name]);
